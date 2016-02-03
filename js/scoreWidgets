@@ -1,0 +1,56 @@
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+if(window.mo === undefined||window.mo==""){mo="1";}
+if(window.co === undefined||window.co==""){co="100";}
+if(window.wi === undefined||window.wi==""){wi="n";}
+if (window.ad === undefined||window.ad==""){ad="1";}
+if(window.nt === undefined||window.nt==""){nt="2";}
+if(window.tor === undefined||window.tor==""){tor="All";}
+if(window.tem === undefined||window.tem==""){tem="All";}
+if(window.mats === undefined||window.mats==""){mats="All";}
+if(window.app === undefined||window.app ==""){app="www.yestoget.com";}
+if(window.defaultTab === undefined||window.defaultTab ==""){defaultTab="";}
+if(window.upcommingAfter12hr === undefined||window.upcommingAfter12hr ==""){upcommingAfter12hr="";}
+affs=document.domain;
+if(affs == ""){affs = "!";}
+if(mo == 'B' || mo == 'L' || mo == 'R'|| mo == 'T'){
+var temp='http://'+ app +'/cricket/widgets/'+mo+'/'+affs+'/'+co+"/toolbarwidget/?dtab="+defaultTab+"&amp;hrInt12="+upcommingAfter12hr;
+}else if(mo == 'Cbox'){
+var temp='http://'+ app +"/cricket/widgets/ChromeExt/Cbox?dtab="+defaultTab+"&amp;hrInt12="+upcommingAfter12hr;
+}else{
+var temp='http://'+ app +'/cricket/widgets/!/'+mo+'/'+affs+'/'+ad+'/'+nt+'/'+tor+'/'+tem+'/'+mats+'/'+co+'/'+wi+"?dtab="+defaultTab+"&amp;hrInt12="+upcommingAfter12hr;
+}
+if(window.Width === undefined||window.Width =="" || window.Height === undefined||window.Height ==""){
+var wdidth='';var hite=300;
+if(mo=='1'){wdidth='221'; hite=500;}
+else if(mo=='2'||mo=='f1'||mo=='f1_cw'){wdidth='300'; hite=253;}
+else if(mo=='3'){wdidth='166'; hite=500;}
+else if(mo=='ind'){wdidth='166'; hite='380';}
+else if(mo=='find'||mo=='f2'){wdidth='347';}
+else if(mo=='h1'){wdidth='728'; hite='90';}
+else if(mo=='h_p11'){wdidth='303'; hite='63';}
+else if(mo=='3_cw'){wdidth='170'; hite='500';}
+else if(mo=='Ext'){wdidth='302'; hite='304';}
+else if(mo=='n_1'){wdidth='365'; hite='40';}
+else if(mo=='Z_W'){wdidth='400'; hite='40';}
+if(wi=='w'){wdidth='400';}
+if (ad=="2"){ hite=hite-90 }
+}else{
+wdidth=Width;
+hite=Height;
+}
+if(mo=='find'){
+document.write("<iframe id="Iframe" src="./scoreWidgets_files/-+ temp +-.html" width="&quot;+ wdidth +&quot;" height="&quot;+hite+&quot;" scrolling="no" frameborder="0" marginheight="0" style="margin:0; padding:0;" marginwidth="0"></iframe>");
+}else if(mo=='Ext'){
+document.write("<iframe id="Extframe" src="./scoreWidgets_files/-+ temp +-.html" width="&quot;+ wdidth +&quot;" height="&quot;+hite+&quot;" scrolling="no" frameborder="0" marginheight="0" style="margin:0; padding:0;" marginwidth="0"></iframe>");
+}else if(mo == 'B' || mo == 'L' || mo == 'R' || mo == 'T'){
+document.write("<iframe id="&quot;+mo+&quot;frame" src="./scoreWidgets_files/-+ temp +-.html" width="&quot;+ wdidth +&quot;" height="&quot;+hite+&quot;" scrolling="no" frameborder="0" marginheight="0" style="margin:0; padding:0;position:fixed;" marginwidth="0"></iframe>");
+}else if(mo == 'Cbox'){
+document.write("<iframe id="&quot;+mo+&quot;frame" src="./scoreWidgets_files/-+ temp +-.html" width="&quot;+ wdidth +&quot;" height="&quot;+hite+&quot;" scrolling="no" frameborder="0" marginheight="0" style="margin:0; padding:0;" marginwidth="0"></iframe>");
+}else{
+document.write("<iframe src="./scoreWidgets_files/-+ temp +-.html" width="&quot;+ wdidth +&quot;" height="&quot;+hite+&quot;" scrolling="no" frameborder="0" marginheight="0" style="margin:0; padding:0;" marginwidth="0"></iframe>");
+}</body></html>
